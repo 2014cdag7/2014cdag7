@@ -29,19 +29,22 @@
 <v t="2014spring.20140508134612.2129"><vh>第十二週任務</vh>
 <v t="2014spring.20140513154549.2535"><vh>組立約束條件屬性</vh></v>
 </v>
-<v t="course-mde-tw.20140417093332.2027"><vh>@path wsgi</vh>
-<v t="course-mde-tw.20140417093332.2028" a="E"
-expanded="course-mde-tw.20140417093332.2030,"><vh>@file application</vh></v>
-<v t="2014spring.20140508134612.2197" a="E"
-expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
+<v t="course-mde-tw.20140417093332.2027" a="E"><vh>@path wsgi</vh>
+<v t="course-mde-tw.20140417093332.2028"><vh>@file application</vh></v>
+<v t="2014spring.20140508134612.2197"><vh>@file cmsimply.py</vh></v>
 </v>
 <v t="2014spring.20140503125211.2097" a="E"><vh>分組程式開發</vh>
-<v t="kmolII_lite.20140519193822.1766"><vh>@path wsgi/programs/cdag7</vh>
-<v t="kmolII_lite.20140519193822.1767"><vh>@edit __init__.py</vh></v>
+<v t="kmolII_lite.20140603113815.1803" a="E"><vh>@path wsgi/programs/cdag7</vh>
+<v t="kmolII_lite.20140603113815.1804"><vh>@edit __init__.py</vh></v>
+<v t="kmolII_lite.20140603113815.1814"><vh>@edit man.py</vh></v>
+<v t="kmolII_lite.20140603113815.1812"><vh>@edit man2.py</vh></v>
+<v t="kmolII_lite.20140603113815.1810"><vh>@edit remsub6.py</vh></v>
 </v>
-<v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
+<v t="2014spring.20140506174436.1831"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
 <v t="2014spring.20140513154549.2534"><vh>@edit man.py</vh></v>
+<v t="2014spring.20140521133830.2641"><vh>@edit man2.py</vh></v>
+<v t="2014spring.20140529085742.2200"><vh>@edit remsub6.py</vh></v>
 </v>
 </v>
 <v t="course-mde-tw.20140417093332.2058" a="E"><vh>利用 pandoc 進行格式轉換</vh>
@@ -51,7 +54,7 @@ expanded="2014spring.20140508134612.2221,"><vh>@file cmsimply.py</vh></v>
 <v t="course-mde-tw.20140417093332.2061"><vh>@edit title.txt</vh></v>
 </v>
 </v>
-<v t="course-mde-tw.20140417093332.2047"><vh>分組協同報告區</vh>
+<v t="course-mde-tw.20140417093332.2047" a="E"><vh>分組協同報告區</vh>
 <v t="course-mde-tw.20140417093332.2048" a="E"><vh>@path wsgi/doc</vh>
 <v t="2014pythonE.20140429160432.1843" a="E"><vh>@path 2ag7</vh>
 <v t="2014pythonE.20140429160432.1844"><vh>@edit doc.txt</vh></v>
@@ -165,7 +168,7 @@ d = c.scanAllDirectives(p)
 filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
-directory = "V:/2014cda/wsgi/doc/"
+directory = "V:/project/2014cda/wsgi/doc/"
 # 定義一個空數列
 filenames = []
 for (path, dirs, files) in os.walk(directory):
@@ -178,7 +181,7 @@ filenames.sort(key=natural_keys)
 # 利用 insert 以 0 為索引, 將 title.txt 放在數列最前頭
 filenames.insert(0, directory+"title.txt")
 # 以下將依據 filenames 數列中的檔案合併為 result.txt 之後再進行文書處理轉換
-with open('V:/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
+with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
         #fname = directory+fname
         with open(fname, encoding="utf-8") as infile:
@@ -200,6 +203,7 @@ setup = '''
 \\usepackage[T1]{fontspec}    %設定字體用 
 \\usepackage{graphicx} 
 \\usepackage{fancyvrb} % for frame on Verbatim 
+\\usepackage{float}
 \\setCJKmainfont{新細明體}
 '''
 # 在 demo.tex 最前頭加上"中文設定"
@@ -866,6 +870,6 @@ Github 倉儲則為: https://github.com/coursemdetw/2014cda
 
 並且將 Github 倉儲與各組可以控制的 OpenShift 網站同步</t>
 <t tx="course-mde-tw.20140422221207.1747">mathspec.sty 檔案必須放在 pandoc 目錄中, 與文書處理原始檔案放在一起.</t>
-<t tx="kmolII_lite.20140519193822.1766"></t>
+<t tx="kmolII_lite.20140603113815.1803"></t>
 </tnodes>
 </leo_file>
