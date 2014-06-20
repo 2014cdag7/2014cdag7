@@ -39,8 +39,9 @@
 <v t="kmolII_lite.20140603113815.1814"><vh>@edit man.py</vh></v>
 <v t="kmolII_lite.20140603113815.1812"><vh>@edit man2.py</vh></v>
 <v t="kmolII_lite.20140603113815.1810"><vh>@edit remsub6.py</vh></v>
+<v t=".20140620204335.1986"><vh>@edit final.html</vh></v>
 </v>
-<v t="2014spring.20140506174436.1831"><vh>@path wsgi/programs/cdag30</vh>
+<v t="2014spring.20140506174436.1831" a="E"><vh>@path wsgi/programs/cdag30</vh>
 <v t="2014spring.20140506174436.1832"><vh>@edit __init__.py</vh></v>
 <v t="2014spring.20140513154549.2534"><vh>@edit man.py</vh></v>
 <v t="2014spring.20140521133830.2641"><vh>@edit man2.py</vh></v>
@@ -168,7 +169,7 @@ d = c.scanAllDirectives(p)
 filenames = ['title.txt', '2bg1/doc.txt', '2bg2/doc.txt', '2bg3/doc.txt', '2bg5/doc.txt', '2bg15/doc.txt', '2bg13/doc.txt', '2bg9/doc.txt']
 '''
 # 定義要合併檔案的共同目錄
-directory = "V:/project/2014cda/wsgi/doc/"
+directory = "V:/project/2014cdag7/wsgi/doc/"
 # 定義一個空數列
 filenames = []
 for (path, dirs, files) in os.walk(directory):
@@ -181,7 +182,7 @@ filenames.sort(key=natural_keys)
 # 利用 insert 以 0 為索引, 將 title.txt 放在數列最前頭
 filenames.insert(0, directory+"title.txt")
 # 以下將依據 filenames 數列中的檔案合併為 result.txt 之後再進行文書處理轉換
-with open('V:/project/2014cda/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
+with open('V:/project/2014cdag7/wsgi/pandoc/result.txt', 'w', encoding="utf-8") as outfile:
     for fname in filenames:
         #fname = directory+fname
         with open(fname, encoding="utf-8") as infile:
